@@ -25,4 +25,10 @@ public class Shooting : MonoBehaviour
 
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse); 
     }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        Debug.Log("Контакт");
+        Destroy(bulletPrefab);
+    }
 }
