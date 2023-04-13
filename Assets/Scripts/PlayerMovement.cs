@@ -44,14 +44,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void ThrustY(float amount)
     { 
-        Vector2 forceY = transform.up * amount;
+        Vector2 forceY = transform.up * amount * Time.deltaTime;
 
         rb.AddForce(forceY);
     }
 
     private void ThrustX(float amount)
     {
-        Vector2 forceX = transform.right * amount;
+        Vector2 forceX = transform.right * amount * Time.deltaTime;
 
         rb.AddForce(forceX);
     }
