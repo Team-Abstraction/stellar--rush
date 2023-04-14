@@ -19,6 +19,10 @@ public class BlackHole : MonoBehaviour
     void Update()
     {
         distanceToPlayer = Vector2.Distance(player.position, transform.position);
+    }
+
+    private void FixedUpdate()
+    {
         if (distanceToPlayer <= influenceRange)
         {
             pullForce = (transform.position - player.position).normalized / distanceToPlayer * intensity;

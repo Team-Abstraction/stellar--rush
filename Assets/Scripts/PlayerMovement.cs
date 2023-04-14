@@ -8,9 +8,11 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public float maxVelocity = 10;
+    public float maxVelocity = 500;
 
     Vector2 mousePos;
+
+    private float _accelerationCoefficent = 10;
 
     private void Start()
     {
@@ -19,20 +21,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float axisX = Input.GetAxis("Horizontal");
-        float axisY = Input.GetAxis("Vertical");
-
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        ThrustY(axisY);
-        ThrustX(axisX);
 
         if (rb.velocity.sqrMagnitude > maxVelocity)
             VelocityClamp();
-
         RotationMouseControl();
     }
 
+    private void FixedUpdate()
+    {
+        float axisX = Input.GetAxis("Horizontal");
+        float axisY = Input.GetAxis("Vertical");
+
+        ThrustY(axisY * _accelerationCoefficent);
+        ThrustX(axisX * _accelerationCoefficent);
+    }
 
     private void VelocityClamp()
     {
@@ -43,15 +46,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void ThrustY(float amount)
-    { 
-        Vector2 forceY = transform.up * amount * Time.deltaTime;
+    {
+        Vector2 forceY = transform.up * amount;
 
         rb.AddForce(forceY);
     }
 
     private void ThrustX(float amount)
     {
-        Vector2 forceX = transform.right * amount * Time.deltaTime;
+        Vector2 forceX = transform.right * amount;
 
         rb.AddForce(forceX);
     }
