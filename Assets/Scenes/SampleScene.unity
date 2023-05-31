@@ -1800,7 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a048dad405fce0345918cc4548030cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectPrefab: {fileID: 8255215019295333937, guid: 139c09de669d89546999f577551dd885, type: 3}
+  effectPrefab: {fileID: 493117677358619639, guid: 3ad6aeb1812e1b94d902fcf0d264faf9, type: 3}
 --- !u!1 &1491962753
 GameObject:
   m_ObjectHideFlags: 0
