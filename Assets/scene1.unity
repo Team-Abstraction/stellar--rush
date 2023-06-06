@@ -243,8 +243,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 0, y: -0.6273}
+  m_SizeDelta: {x: 164.2168, y: 164.6349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373462328
 MonoBehaviour:
@@ -609,7 +609,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1636618243088966150, guid: b227c3edb4b481648b894766029b0287, type: 3}
   m_PrefabInstance: {fileID: 1636618242064534588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1125363264
+--- !u!50 &1125363261 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1636618243088966146, guid: b227c3edb4b481648b894766029b0287, type: 3}
+  m_PrefabInstance: {fileID: 1636618242064534588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1125363262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -618,41 +623,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 403863057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 300cca4095413c249b647af88ce4ca6d, type: 3}
+  m_Script: {fileID: 11500000, guid: d9f64e0b8e12c4a4d904652151931ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
-  _rotationSpeed: 720
---- !u!114 &1125363265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403863057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: b7ab3c414c8a567478b795d4eb1760c8, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  cam: {fileID: 1458737567}
+  rb: {fileID: 1125363261}
+  maxVelocity: 500
 --- !u!1 &1204327773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,4 +1733,5 @@ PrefabInstance:
       objectReference: {fileID: 1458737567}
     m_RemovedComponents:
     - {fileID: 1636618243088966147, guid: b227c3edb4b481648b894766029b0287, type: 3}
+    - {fileID: 487584502236687656, guid: b227c3edb4b481648b894766029b0287, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b227c3edb4b481648b894766029b0287, type: 3}
