@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !PauseMenu.GameIsPaused)
         {
             ContinueStory();
         }
